@@ -28,10 +28,13 @@ export function HeroSplash() {
         zIndex: 0,
         overflow: "hidden",
         backgroundColor: "#0A0A0A",
+        opacity,
+        transition: "opacity 0.1s ease-out",
+        pointerEvents: opacity <= 0.01 ? "none" : "auto",
+        visibility: opacity <= 0.01 ? "hidden" : "visible",
       }}
     >
       <div
-        style={{ opacity, transition: "opacity 0.1s ease-out" }}
         className="flex flex-col items-center justify-center h-full px-6"
       >
         <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
