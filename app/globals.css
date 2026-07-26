@@ -15,12 +15,12 @@
   --secondary: #1A1A1A;
   --secondary-foreground: #F0EDE8;
   --muted: #141414;
-  --muted-foreground: #5A5A5A;
-  --accent: #555555;
+  --muted-foreground: #A6A6A6;
+  --accent: #8C8C8C;
   --accent-foreground: #F0EDE8;
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: #141414;
+  --border: #262626;
   --input: #1A1A1A;
   --ring: #555555;
   --chart-1: oklch(0.646 0.222 41.116);
