@@ -38,16 +38,16 @@ export function HeroSplash() {
         className="flex flex-col items-center justify-center h-full px-6"
       >
         <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-          ION<span className="text-[#555555]">.</span>GROUP
+          ION<span className="text-[#8C8C8C]">.</span>GROUP
         </h1>
-        <p className="text-[10px] text-[#555555] uppercase tracking-[6px] mt-4">
+        <p className="text-[10px] text-[#8C8C8C] uppercase tracking-[6px] mt-4">
           {t.splash.tagline}
         </p>
-        <div className="w-12 h-px bg-[#555555] mt-8 mb-8" />
-        <p className="text-sm text-[#5A5A5A] text-center leading-relaxed">
+        <div className="w-12 h-px bg-[#7A7A7A] mt-8 mb-8" />
+        <p className="text-sm text-[#A6A6A6] text-center leading-relaxed">
           {t.splash.line1}
         </p>
-        <p className="text-sm text-[#5A5A5A] text-center leading-relaxed">
+        <p className="text-sm text-[#A6A6A6] text-center leading-relaxed">
           {t.splash.line2}
         </p>
       </div>

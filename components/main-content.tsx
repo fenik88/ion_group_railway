@@ -82,11 +82,11 @@ export function MainContent() {
 
       {/* HERO TEXT */}
       <section id="hero" className="px-6 md:px-12 pt-24 pb-18">
-        <div className="text-[10px] text-[#5A5A5A] tracking-[3px] uppercase mb-6">{t.hero.tagline}</div>
+        <div className="text-[10px] text-[#8C8C8C] tracking-[3px] uppercase mb-6">{t.hero.tagline}</div>
         <h1 className="text-4xl md:text-6xl font-medium leading-[1.1] tracking-tight mb-6 max-w-[640px] text-balance">
           {t.hero.title1}
           <br />
-          <span className="text-accent">{t.hero.title2}</span>
+          <span className="text-foreground">{t.hero.title2}</span>
         </h1>
         <p className="text-[13px] text-muted-foreground leading-relaxed max-w-[340px] mb-10">
           {t.hero.description}
@@ -100,7 +100,7 @@ export function MainContent() {
           </Link>
           <Link
             href="#cases"
-            className="text-[10px] text-[#5A5A5A] tracking-[2px] uppercase hover:text-foreground transition-colors"
+            className="text-[10px] text-[#A6A6A6] tracking-[2px] uppercase hover:text-foreground transition-colors"
           >
             {t.hero.ctaSecondary}
           </Link>
@@ -129,9 +129,9 @@ export function MainContent() {
         <div className="grid grid-cols-1 md:grid-cols-2 border-t border-l border-border">
           {t.services.items.map(({ num, title, desc }) => (
             <div key={num} className="px-6 md:px-10 py-9 border-r border-b border-border">
-              <div className="text-[9px] text-[#555] tracking-[2px] mb-3">{num}</div>
+              <div className="text-[9px] text-[#7A7A7A] tracking-[2px] mb-3">{num}</div>
               <div className="text-[15px] font-medium mb-2">{title}</div>
-              <div className="text-[13px] text-[#5A5A5A] leading-relaxed">{desc}</div>
+              <div className="text-[13px] text-[#A6A6A6] leading-relaxed">{desc}</div>
             </div>
           ))}
         </div>
@@ -150,7 +150,7 @@ export function MainContent() {
               </div>
               <div className="text-right">
                 <div className="text-lg font-medium">{stat}</div>
-                <div className="text-[13px] text-[#5A5A5A] mt-0.5">{desc}</div>
+                <div className="text-[13px] text-[#A6A6A6] mt-0.5">{desc}</div>
               </div>
             </div>
           ))}
@@ -166,10 +166,10 @@ export function MainContent() {
         <div className="border-t border-border">
           {t.process.items.map(({ num, title, desc }) => (
             <div key={num} className="flex gap-6 py-6 border-b border-border">
-              <div className="text-[10px] text-[#555] tracking-[2px] min-w-[28px] pt-0.5">{num}</div>
+              <div className="text-[10px] text-[#7A7A7A] tracking-[2px] min-w-[28px] pt-0.5">{num}</div>
               <div>
                 <div className="text-sm font-medium mb-1.5">{title}</div>
-                <div className="text-[13px] text-[#5A5A5A] leading-relaxed">{desc}</div>
+                <div className="text-[13px] text-[#A6A6A6] leading-relaxed">{desc}</div>
               </div>
             </div>
           ))}
@@ -184,7 +184,7 @@ export function MainContent() {
           {t.faq.items.map(({ q, a }) => (
             <div key={q} className="py-6 border-b border-border">
               <div className="text-[13px] font-medium mb-2">{q}</div>
-              <div className="text-[13px] text-[#5A5A5A] leading-relaxed">{a}</div>
+              <div className="text-[13px] text-[#A6A6A6] leading-relaxed">{a}</div>
             </div>
           ))}
         </div>
@@ -219,7 +219,7 @@ export function MainContent() {
             Telegram
           </Link>
         </div>
-        <div className="text-[10px] text-[#555]">{t.footer.copyright}</div>
+        <div className="text-[10px] text-[#7A7A7A]">{t.footer.copyright}</div>
       </footer>
 
     </div>
