@@ -136,7 +136,7 @@ export const translations = {
       items: [
         { name: "Patoshi", tag: "Mini-app · 2024", stat: "+60K", desc: "подписчиков за 60 дней" },
         { name: "JamFi", tag: "DeFi · 2025", stat: "$600,000", desc: "привлечено при presale" },
-        { name: "MovitOn", tag: "DeFi · 2024", stat: "Приглашение на Token2049", desc: "На��иная с 0 подписчиков" },
+        { name: "MovitOn", tag: "DeFi · 2024", stat: "Приглашение на Token2049", desc: "Начиная с 0 подписчиков" },
       ],
     },
     // Process
