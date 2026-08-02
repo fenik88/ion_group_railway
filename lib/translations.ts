@@ -20,7 +20,7 @@ export const translations = {
       title1: "We don't make noise.",
       title2: "We build socials.",
       description: "ION GROUP works with Web3 projects that need professional content, live community and real results.",
-      cta: "Start a project",
+      cta: "Get a free audit",
       ctaSecondary: "See our work",
     },
     // Stats
@@ -107,7 +107,7 @@ export const translations = {
       title1: "Мы не создаём шум.",
       title2: "Мы строим соцсети.",
       description: "ION GROUP работает с Web3 проектами, которым нужен профессиональный контент, живое комьюнити и реальные результаты.",
-      cta: "Начать проект",
+      cta: "Бесплатный разбор",
       ctaSecondary: "Наши работы",
     },
     // Stats

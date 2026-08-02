@@ -32,6 +32,12 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     localStorage.setItem(STORAGE_KEY, lang)
   }
 
+  // Keep the <html lang> attribute in sync with the selected language
+  // (important for SEO and screen readers).
+  useEffect(() => {
+    document.documentElement.lang = language
+  }, [language])
+
   const t = translations[language]
 
   // Prevent hydration mismatch by rendering with default until mounted

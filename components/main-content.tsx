@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { useEffect, useState } from "react"
-import { Send } from "lucide-react"
+import { Send, Menu, X } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
 import { Reveal } from "@/components/reveal"
 import { CountUp } from "@/components/count-up"
@@ -16,9 +16,17 @@ function Dot({ className = "" }: { className?: string }) {
   )
 }
 
+// Smoothly scrolls to a section by id. Works on every click regardless of the
+// current URL hash (native #anchor links don't re-fire if the hash is unchanged).
+function scrollToId(id: string) {
+  const el = document.getElementById(id)
+  if (el) el.scrollIntoView({ behavior: "smooth", block: "start" })
+}
+
 export function MainContent() {
   const { language, setLanguage, t } = useLanguage()
   const [navVisible, setNavVisible] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -62,19 +70,23 @@ export function MainContent() {
           pointerEvents: navVisible ? "auto" : "none",
         }}
       >
-        <Link href="#hero" className="text-[19px] font-medium tracking-tight hover:text-accent transition-colors">ION GROUP</Link>
+        <button onClick={() => scrollToId("hero")} className="text-[19px] font-medium tracking-tight hover:text-accent transition-colors">ION GROUP</button>
+
+        {/* Desktop links */}
         <div className="hidden md:flex gap-10">
           {navLinks.map((l) => (
-            <Link
+            <button
               key={l.key}
-              href={`#${l.key}`}
+              onClick={() => scrollToId(l.key)}
               className="text-[16px] text-muted-foreground uppercase tracking-[2px] hover:text-foreground transition-colors"
             >
               {l.label}
-            </Link>
+            </button>
           ))}
         </div>
-        <div className="flex items-center gap-5">
+
+        {/* Desktop right cluster */}
+        <div className="hidden md:flex items-center gap-5">
           <button
             onClick={() => setLanguage(language === "en" ? "ru" : "en")}
             className="text-[16px] text-muted-foreground uppercase tracking-[2px] hover:text-foreground transition-colors"
@@ -83,13 +95,66 @@ export function MainContent() {
             <span className="mx-1">/</span>
             <span className={language === "en" ? "text-foreground" : ""}>EN</span>
           </button>
-          <Link
-            href="#contact"
+          <button
+            onClick={() => scrollToId("contact")}
             className="text-[16px] text-foreground uppercase tracking-[2px] border border-accent px-6 py-3 rounded hover:bg-accent hover:text-background transition-colors"
           >
             {t.nav.contact}
-          </Link>
+          </button>
         </div>
+
+        {/* Mobile controls */}
+        <div className="flex md:hidden items-center gap-5">
+          <button
+            onClick={() => setLanguage(language === "en" ? "ru" : "en")}
+            className="text-[15px] text-muted-foreground uppercase tracking-[2px]"
+          >
+            <span className={language === "ru" ? "text-foreground" : ""}>RU</span>
+            <span className="mx-1">/</span>
+            <span className={language === "en" ? "text-foreground" : ""}>EN</span>
+          </button>
+          <button
+            onClick={() => setMenuOpen((v) => !v)}
+            aria-label="Menu"
+            className="text-foreground p-1 -mr-1"
+          >
+            {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+
+        {/* Mobile dropdown panel */}
+        {menuOpen && (
+          <div
+            className="md:hidden absolute top-full left-0 right-0 flex flex-col gap-1 px-6 py-4 border-b border-border"
+            style={{
+              backgroundColor: "rgba(10,10,10,0.96)",
+              backdropFilter: "blur(14px)",
+              WebkitBackdropFilter: "blur(14px)",
+            }}
+          >
+            {navLinks.map((l) => (
+              <button
+                key={l.key}
+                onClick={() => {
+                  scrollToId(l.key)
+                  setMenuOpen(false)
+                }}
+                className="text-left text-[16px] text-muted-foreground uppercase tracking-[2px] py-3 hover:text-foreground transition-colors"
+              >
+                {l.label}
+              </button>
+            ))}
+            <button
+              onClick={() => {
+                scrollToId("contact")
+                setMenuOpen(false)
+              }}
+              className="text-left text-[16px] text-foreground uppercase tracking-[2px] py-3 mt-1 border-t border-border"
+            >
+              {t.nav.contact}
+            </button>
+          </div>
+        )}
       </nav>
 
       {/* HERO TEXT */}
@@ -107,18 +172,18 @@ export function MainContent() {
             {t.hero.description}
           </p>
           <div className="flex gap-5 items-center flex-wrap">
-            <Link
-              href="#contact"
+            <button
+              onClick={() => scrollToId("contact")}
               className="bg-primary text-primary-foreground text-[12px] font-medium px-8 py-4 rounded tracking-[2px] uppercase hover:opacity-90 transition-opacity"
             >
               {t.hero.cta}
-            </Link>
-            <Link
-              href="#cases"
+            </button>
+            <button
+              onClick={() => scrollToId("cases")}
               className="text-[12px] text-[#A6A6A6] tracking-[2px] uppercase hover:text-foreground transition-colors"
             >
               {t.hero.ctaSecondary}
-            </Link>
+            </button>
           </div>
         </Reveal>
       </section>
@@ -254,7 +319,7 @@ export function MainContent() {
 
       {/* FOOTER */}
       <footer className="flex flex-col md:flex-row justify-between items-center gap-6 px-6 md:px-12 py-16 border-t border-border">
-        <Link href="#hero" className="text-[18px] font-medium hover:text-accent transition-colors">ION GROUP</Link>
+        <button onClick={() => scrollToId("hero")} className="text-[18px] font-medium hover:text-accent transition-colors">ION GROUP</button>
         <div className="flex gap-10">
           <Link href="https://t.me/iongroup_agency" target="_blank" rel="noopener noreferrer" className="text-[22px] text-accent uppercase tracking-[2px] hover:text-foreground transition-colors">
             Telegram
