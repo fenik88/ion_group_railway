@@ -16,6 +16,7 @@ export function HeroSplash() {
     }
 
     window.addEventListener("scroll", handleScroll, { passive: true })
+    handleScroll()
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
@@ -40,14 +41,14 @@ export function HeroSplash() {
         <h1 className="text-6xl md:text-[140px] font-bold tracking-[-0.03em] leading-none">
           ION<span className="text-[#8C8C8C]">.</span>GROUP
         </h1>
-        <p className="text-[10px] text-[#8C8C8C] uppercase tracking-[6px] mt-4">
+        <p className="text-[12px] text-[#8C8C8C] uppercase tracking-[5px] mt-5">
           {t.splash.tagline}
         </p>
         <div className="w-12 h-px bg-[#7A7A7A] mt-8 mb-8" />
-        <p className="text-sm text-[#A6A6A6] text-center leading-relaxed">
+        <p className="text-[15px] md:text-[17px] text-[#A6A6A6] text-center leading-relaxed">
           {t.splash.line1}
         </p>
-        <p className="text-sm text-[#A6A6A6] text-center leading-relaxed">
+        <p className="text-[15px] md:text-[17px] text-[#A6A6A6] text-center leading-relaxed">
           {t.splash.line2}
         </p>
       </div>
