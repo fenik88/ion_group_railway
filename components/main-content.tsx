@@ -233,10 +233,13 @@ export function MainContent() {
           <h2 className="text-[40px] md:text-[56px] font-medium tracking-[-0.02em] leading-[1.02] mb-12">{t.cases.title}</h2>
         </Reveal>
         <Reveal className="border-t border-border">
-          {t.cases.items.map(({ name, tag, stat, desc }) => (
-            <div
+          {t.cases.items.map(({ name, tag, stat, desc, link }) => (
+            <a
               key={name}
-              className="group flex justify-between items-center gap-4 px-4 -mx-4 py-7 border-b border-border rounded-sm transition-colors duration-300 hover:bg-[#F0EDE8]"
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex justify-between items-center gap-4 px-4 -mx-4 py-7 border-b border-border rounded-sm transition-colors duration-300 hover:bg-[#F0EDE8] cursor-pointer"
             >
               <div>
                 <div className="text-[18px] md:text-[20px] font-medium transition-colors duration-300 group-hover:text-[#0A0A0A]">{name}</div>
@@ -246,7 +249,7 @@ export function MainContent() {
                 <div className="text-[26px] md:text-[32px] font-medium leading-none tracking-[-0.01em] transition-colors duration-300 group-hover:text-[#0A0A0A]">{stat}</div>
                 <div className="text-[15px] text-[#B8B8B8] mt-1.5 transition-colors duration-300 group-hover:text-[#3A3A3A]">{desc}</div>
               </div>
-            </div>
+            </a>
           ))}
         </Reveal>
       </section>

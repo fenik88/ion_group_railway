@@ -47,9 +47,10 @@ export const translations = {
       label: "Cases",
       title: "Results speak.",
       items: [
-        { name: "Patoshi", tag: "Mini-app · 2024", stat: "+60K", desc: "followers in 60 days" },
-        { name: "JamFi", tag: "DeFi · 2025", stat: "$600,000", desc: "raised during presale" },
-        { name: "MovitOn", tag: "DeFi · 2024", stat: "Invite to Token2049", desc: "Starting from 0 followers" },
+        { name: "Patoshi", tag: "Mini-app · 2024", stat: "+60K", desc: "followers in 60 days", link: "https://t.me/patoshi_community" },
+        { name: "JamFi", tag: "DeFi · 2025", stat: "$600,000", desc: "raised during presale", link: "https://x.com/JamiiFinance" },
+        { name: "MovitOn", tag: "DeFi · 2025", stat: "Invite to Token2049", desc: "Starting from 0 followers", link: "https://x.com/MovitOn_P2P" },
+        { name: "Ton Loading", tag: "Influencer · 2026", stat: "Top-3 Telegram channel", desc: "about TON ecosystem and gifts", link: "https://t.me/tonloading" },
       ],
     },
     // Process
@@ -134,9 +135,10 @@ export const translations = {
       label: "Кейсы",
       title: "Результаты говорят сами.",
       items: [
-        { name: "Patoshi", tag: "Mini-app · 2024", stat: "+60K", desc: "подписчиков за 60 дней" },
-        { name: "JamFi", tag: "DeFi · 2025", stat: "$600,000", desc: "привлечено при presale" },
-        { name: "MovitOn", tag: "DeFi · 2024", stat: "Приглашение на Token2049", desc: "Начиная с 0 подписчиков" },
+        { name: "Patoshi", tag: "Mini-app · 2024", stat: "+60K", desc: "подписчиков за 60 дней", link: "https://t.me/patoshi_community" },
+        { name: "JamFi", tag: "DeFi · 2025", stat: "$600,000", desc: "привлечено при presale", link: "https://x.com/JamiiFinance" },
+        { name: "MovitOn", tag: "DeFi · 2025", stat: "Приглашение на Token2049", desc: "Начиная с 0 подписчиков", link: "https://x.com/MovitOn_P2P" },
+        { name: "Ton Loading", tag: "Инфлюенсер · 2026", stat: "Топ-3 Telegram-канал", desc: "про экосистему TON и подарки", link: "https://t.me/tonloading" },
       ],
     },
     // Process
