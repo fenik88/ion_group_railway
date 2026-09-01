@@ -55,7 +55,7 @@ export function MainContent() {
 
       {/* FIXED NAV - appears after scrolling past hero */}
       <nav
-        className="flex justify-between items-center px-6 md:px-12 py-[18px] transition-opacity duration-300"
+        className="flex justify-between items-center px-6 md:px-12 py-[18px] transition-opacity duration-300 gap-4  "
         style={{
           position: "fixed",
           top: 0,
